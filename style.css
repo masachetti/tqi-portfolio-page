@@ -1,0 +1,339 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    
+}
+
+/* HEADER */
+
+/* BACKGROUND IMAGE */
+
+.background{
+    height: 100%;
+    width: 100%;
+    background-image: url("./img/landscape.png");
+    background-repeat: no-repeat;
+    background-position: 0% 75%;
+    background-size: cover;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.85;
+    filter: grayscale(0.4);
+}
+
+.particles{
+    height: 100%;
+    width: 100%;
+    background-image: url("./img/particles.png");
+    background-size: auto;
+    position: absolute;
+    z-index: 0;
+    opacity: 0.6;
+    filter: grayscale(0.8);
+    animation: backgroundParticlesX 150s linear infinite, backgroundParticlesY 5s ease-in infinite;
+}
+
+.header-wrapper{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    position: relative;
+    color: white;
+}
+
+.header-wrapper h1,h2{
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.social-media{
+    display: flex;
+    margin-top: 1rem;
+    z-index: 1;
+}
+
+.social-media a{
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    padding: 1rem 4rem;
+    border: 1px solid white;
+    min-width: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s cubic-bezier(0.55, 0.025, 0.675, 0.97);
+}
+
+.social-media a:hover{
+    color: #2e1c2b;
+    background-color: white;
+}
+
+/* MENU */
+
+.menu-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: rgb(230, 230, 230);
+    visibility: hidden;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 0px 0px rgb(230, 230, 230);
+    z-index: -1;
+    opacity: 0;
+    transition: 400ms ease-in-out 0s;
+}
+
+.menu-items{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    transition: 10ms ease-in 0ms;
+}
+
+.menu-items ul{
+    height: 40%;
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.menu-items ul li a{
+    text-decoration: none;
+    color: #2e1c2b;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 36px;
+}
+
+
+/* BOTÃO MENU */
+
+.checkbox{
+    width: 100px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    cursor: pointer;
+    top: 10px;
+    right: 5rem;
+    z-index: 99;
+    transition: 400ms ease-in-out 0s;
+}
+
+.checkbox .trace{
+    width: 60px;
+    height: 4px;
+    background-color: white;
+    position: absolute;
+    border-radius: 4px;
+    transition: 0.5s ease-in-out;
+}
+
+#toggle{
+    display: none;
+}
+
+.checkbox .trace:nth-child(1){
+    top: 20px;
+    transform: rotate(0);
+}
+
+.checkbox .trace:nth-child(2){
+    top: 38px;
+    transform: rotate(0);
+}
+
+.checkbox .trace:nth-child(3){
+    top: 56px;
+    transform: rotate(0);
+}
+
+/* ANIMAÇÃO BOTÃO MENU */
+
+#toggle:checked + .checkbox .trace:nth-child(1){
+    top: 38px;
+    transform: rotate(45deg);
+    background-color: #2e1c2b;
+}
+
+#toggle:checked + .checkbox .trace:nth-child(2){
+    transform: translateX(-100px);
+    width: 30px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#toggle:checked + .checkbox .trace:nth-child(3){
+    top: 38px;
+    transform: rotate(-45deg);
+    background-color: #2e1c2b;
+}
+
+/* ANIMAÇÃO MENU */
+
+#toggle:checked ~ .menu-items{
+    visibility: visible;
+    opacity: 1;
+    transition: 400ms ease-in 0ms;
+}
+
+#toggle:checked ~ .menu{
+    box-shadow: 0px 0px 0px 100vmax rgb(230, 230, 230);
+    visibility: visible;
+    opacity: 1;
+    z-index: 2;
+}
+
+/* CONTENT */
+
+.content-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.content-block{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-block .content-title{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.content-block .content-title::before, .content-block .content-title::after{
+    content: "";
+    width: 35%;
+    border-top: 3px solid #2e1c2b;
+    flex: 1;
+}
+
+.content-block .content-title h1{
+    color: #2e1c2b;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    flex: 2;
+    text-align: center;
+}
+
+/* ABOUT */
+
+.about{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about .profile-img{
+    min-width: 250px;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid #7e5f70;
+    margin: 0 50px;
+}
+
+.about img{
+    width: 100%;
+    margin: -50px -10px -50px 0;
+}
+
+/* LINK */
+
+.links{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.link-card{
+    text-decoration: none;
+    width: 35%;
+    margin: 10px;
+    min-width: 150px;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: #543749;
+    border: 3px solid #473343;
+}
+
+.link-card span{
+    font-size: 26px;
+    color: white;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.links img{
+    width: 15%;
+    min-width: 30px;
+}
+
+.resume-card img, .github-card img{
+    filter: invert(1);
+}
+
+/* ANIMAÇÕES */
+
+@keyframes backgroundParticlesX{
+    0%{
+        background-position-x: 0%;
+    }
+    100%{
+        background-position-x: -400%;
+    }
+}
+
+@keyframes backgroundParticlesY{
+    0%{
+        background-position-y: 0%;
+    }
+    50%{
+        background-position-y: 3%;
+    }
+    100%{
+        background-position-y: 0%;
+    }
+}

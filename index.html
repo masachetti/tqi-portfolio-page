@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        window.onscroll = function () {
+            document.getElementById("toggle").checked = false;
+        }
+    </script>
+
+</head>
+
+<body>
+    <header class="header-wrapper">
+        <div class="background"></div>
+        <div class="particles"></div>
+        <div class="menu-container">
+            <class class="checkbox-wrapper">
+                <input type="checkbox" id="toggle">
+                <label for="toggle" class="checkbox">
+                    <div class="trace"></div>
+                    <div class="trace"></div>
+                    <div class="trace"></div>
+                </label>
+                <div class="menu"></div>
+                <nav class="menu-items">
+                    <ul>
+                        <li>
+                            <a href="#about">Sobre Mim</a>
+                        </li>
+                        <li>
+                            <a href="#projects">Projetos</a>
+                        </li>
+                        <li>
+                            <a href="#links">Links</a>
+                        </li>
+                    </ul>
+                </nav>
+            </class>
+        </div>
+        <h1>Mateus Sachetti</h1>
+        <h2>Software Developer</h2>
+        <div class="social-media">
+            <a href="https://github.com/masachetti">GitHub</a>
+            <a href="https://www.linkedin.com/in/mateus-sachetti-b32265236/">Linkedin</a>
+        </div>
+    </header>
+    <div class="content-container">
+        <div class="content-block" id="about">
+            <div class="content-title">
+                <h1>Sobre Mim</h1>
+            </div>
+            <div class="about">
+                <div class="profile-img">
+                    <img src="./img/perfil-img.jpg" alt="Minha foto de perfil.">
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer finibus diam dolor, mattis aliquam
+                    leo
+                    iaculis non. Nam eu molestie mi, vel vehicula neque. Etiam non leo in magna molestie scelerisque vel
+                    in
+                    justo. Quisque leo odio, interdum tincidunt libero a, vulputate euismod lacus. Nullam at porta diam.
+                    Etiam sodales sagittis placerat. Nullam tincidunt faucibus elementum. Cras rhoncus, velit eu posuere
+                    sodales, orci mauris auctor urna, eu viverra ipsum elit sed lorem.</p>
+            </div>
+        </div>
+        <div class="content-block" id="projects">
+            <div class="content-title">
+                <h1>Projetos</h1>
+            </div>
+            <div class="projects">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer finibus diam dolor, mattis aliquam
+                    leo
+                    iaculis non. Nam eu molestie mi, vel vehicula neque. Etiam non leo in magna molestie scelerisque vel
+                    in
+                    justo. Quisque leo odio, interdum tincidunt libero a, vulputate euismod lacus. Nullam at porta diam.
+                    Etiam sodales sagittis placerat. Nullam tincidunt faucibus elementum. Cras rhoncus, velit eu posuere
+                    sodales, orci mauris auctor urna, eu viverra ipsum elit sed lorem. Sed volutpat, mi vitae euismod
+                    rhoncus, dui ex posuere nulla, vitae aliquet nibh tortor et arcu. Praesent placerat augue eu odio
+                    mollis
+                    ornare. Aenean egestas mauris quis ultrices consectetur. Nulla ultricies scelerisque turpis, vel
+                    lobortis nunc imperdiet sed. Sed placerat volutpat iaculis. Nulla accumsan auctor sapien, in
+                    sollicitudin risus malesuada non. Vivamus sed est et lorem finibus molestie. </p>
+            </div>
+        </div>
+        <div class="content-block" id="links">
+            <div class="content-title">
+                <h1>Links</h1>
+            </div>
+            <div class="links">
+                <a href="https://github.com/masachetti" class="link-card github-card">
+                    <img src="img/github-logo.png" alt="Github logo">
+                    <span>GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/mateus-sachetti-b32265236/" class="link-card">
+                    <img src="img/linkedin-logo.png" alt="Linkedin logo">
+                    <span>Linkedin</span>
+                </a>
+                <a href="mailto:mateus.sachetti@gmail.com" class="link-card">
+                    <img src="img/gmail-Logo.png" alt="Gmail logo">
+                    <span>Gmail</span>
+                </a>
+                <a href="https://cvkeep.com/cv/masachetti" class="link-card resume-card">
+                    <img src="img/resume-icon.png" alt="Resume icon image">
+                    <span>Resume</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <footer></footer>
+</body>
+
+</html>
