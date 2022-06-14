@@ -337,3 +337,26 @@ body{
         background-position-y: 0%;
     }
 }
+
+/* REPONSIVIDADE */
+
+@media (max-width:800px){
+    .checkbox{
+        top: 0;
+        right: 0;
+    }
+}
+
+@media (max-width:700px){
+    .about{
+        flex-direction: column;
+    }
+
+    .about .profile-img{
+        width: 30%;
+    }
+
+    .content-block{
+        width: 95%;
+    }
+}
